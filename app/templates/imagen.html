@@ -1,10 +1,41 @@
 <!doctype html>
 <html lang="es">
-  <head><meta charset="utf-8"><title>Pokeneas</title></head>
-  <body style="font-family: system-ui; text-align:center; padding:20px;">
-    <h1>{{ nombre }}</h1>
-    <img src="{{ img_url }}" alt="{{ nombre }}" style="max-width:480px;width:100%;height:auto;">
-    <p style="font-size:1.25rem;margin-top:12px;">“{{ frase }}”</p>
-    <small>Container: {{ container_id }}</small>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Pokeneas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;margin:0;padding:24px;background:#f7fafc;color:#111;}
+    .wrap{max-width:900px;margin:auto}
+    h1{margin:0 0 8px 0;text-align:center}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    @media (max-width: 800px){.grid{grid-template-columns:1fr}}
+    .card{background:#fff;border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.08);padding:20px}
+    .img{width:100%;max-width:480px;height:auto;display:block;margin:0 auto;border-radius:12px}
+    .kvs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .kv{background:#f7f9fc;border-radius:12px;padding:12px}
+    .muted{color:#666;font-size:12px;margin-top:12px;display:block}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>{{ nombre }}</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img class="img" src="{{ img_url }}" alt="{{ nombre }}" />
+      {% if frase %}<p style="margin-top:12px">{{ frase }}</p>{% endif %}
+      <span class="muted">Container: {{ container_id }}</span>
+    </div>
+
+    <div class="card">
+      <h3 style="margin:0 0 8px 0">Ficha</h3>
+      <div class="kvs">
+        {% if habilidad %}<div class="kv"><strong>Habilidad</strong><br>{{ habilidad }}</div>{% endif %}
+        {% if altura is not none %}<div class="kv"><strong>Altura</strong><br>{{ altura }} m</div>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>

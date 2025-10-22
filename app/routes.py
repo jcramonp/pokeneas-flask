@@ -29,5 +29,7 @@ def imagen():
         nombre=p.get("nombre","Pokenea"),
         frase=p.get("frase","¡Atrápalos todos!"),
         img_url=img_url,
-        container_id=container_id()
+        container_id=container_id(),
+        altura=p.get("altura"),
+        habilidad=p.get("habilidad")
     )
