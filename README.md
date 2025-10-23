@@ -13,7 +13,7 @@ Repositorios
 
 -   **GitHub**: <https://github.com/jcramonp/pokeneas-flask.git>
 
--   **Docker Hub**: https://hub.docker.com/r/juanof/pokeneas *(cambiar si tu repo es otro)*
+-   **Docker Hub**: https://hub.docker.com/r/juanof/pokeneas
 
 Endpoints públicos (cualquiera funciona)
 ----------------------------------------
@@ -40,7 +40,7 @@ Bucket S3
 Arquitectura de despliegue
 --------------------------
 
--   4 instancias EC2 (Amazon Linux/Ubuntu), 1 **manager líder** + 3 **managers**.
+-   4 instancias EC2 (Ubuntu), 1 **manager líder** + 3 **managers**.
 
 -   **Docker Swarm** con servicio `pokeneas` en **10 réplicas** desde `juanof/pokeneas:latest`.
 
