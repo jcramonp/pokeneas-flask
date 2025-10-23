@@ -1,5 +1,10 @@
 # Flask random pokeneas:
 
+### Realizado por:
+- Juan Camilo Ramón Pérez
+- Valentina Castro Pineda
+------------
+
 Se exponen 2 rutas:
 
 -   `/api/pokenea` → JSON con el pokenea y `container_id`
