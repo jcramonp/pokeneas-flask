@@ -1,4 +1,6 @@
-# Aplicación Flask dockerizada que expone 2 rutas:
+# Flask random pokeneas:
+
+Se exponen 2 rutas:
 
 -   `/api/pokenea` → JSON con el pokenea y `container_id`
 
